@@ -1,6 +1,6 @@
 doctype html
-html
-  head(lang='en')
+html(lang='en')
+  head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.css')
@@ -9,4 +9,17 @@ html
     script(src='/javascripts/bootstrap.bundle.min.js')
     script(src='/javascripts/fontawesome-all.js')
   body
-    block content
+    nav.navbar.fixed-top.navbar-expand-md.navbar-dark
+      a.navbar-brand(href='/') Loc8r
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/about') About
+    .content
+      block content
+      footer
+        .row
+          .col-12
+            small &copy; Himanshu 2018
