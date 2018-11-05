@@ -3,7 +3,7 @@ let dbURI = 'mongodb://localhost:27017/loc8r';
 if (process.env.NODE_ENV === 'production')
   dbURI = process.env.MLAB_URI;
 
-mongoose.connect(dbURI, {"useNewUrlParser": true});
+mongoose.connect(dbURI);
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${dbURI}`);
 });

@@ -196,7 +196,7 @@ const _doAddReview = function(req, res, location){
         _updateAverageRating(location._id);
         const thisReview = location.reviews[location.reviews.length -1];
         res
-          .status(200)
+          .status(201)
           .json(thisReview);
       }
     });

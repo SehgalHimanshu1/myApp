@@ -6,7 +6,7 @@ const locationsListByDistance = function (req, res, next){
   const lat = parseFloat(req.query.lat);
   const maxDistance = parseFloat(req.query.maxDistance);
 
-  if (!lng||!lat||!maxDistance){
+  if (!lng && lng!== 0 ||!lat && lat !== 0||!maxDistance){
     console.log('locationsListByDistance: missing params');
     res
       .status(404)
