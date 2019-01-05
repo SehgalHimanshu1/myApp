@@ -1,5 +1,9 @@
 extends layout
 include _includes/sharedHTMLfunctions
+block scripts
+  script(src='/build/runtime.a66f828dca56eeb90e02.js')
+  script(src='/build/polyfills.7fb637d055581aa28d51.js')
+  script(src='/build/main.62137da8478eb3dee878.js')
 block content
   .row.banner
     .col-12
@@ -8,6 +12,8 @@ block content
   .row
     .col-md-8
       .error= message
+      app-home-list Loading...
+    //-
       each location in locations
         .card
           .card-block
